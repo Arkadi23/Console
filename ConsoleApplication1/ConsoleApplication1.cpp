@@ -7,12 +7,12 @@
 #include <ctime>
 
 /***************************************
-       User-defined header includes           
+       User-defined header includes
 ***************************************/
+
 #include "Creature.h"
 #include "Player.h"
 #include "Monster.h"
-#include "Controller.h"
 
 using namespace std;
 
@@ -20,6 +20,10 @@ int main()
 {
 	srand(static_cast<unsigned int>(time(nullptr)));
 
-    Controller a;
-    a.createPlayer();
+    string playerName;
+    cout << "Enter your name: ";
+    cin >> playerName;
+    Player player(playerName);
+    cout << "Welcome, " << player.getName() << endl;
+
 }
